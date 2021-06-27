@@ -1,3 +1,4 @@
+#Catty Coin
 The Catty Coin is here for revenge🐱
 Dogs' time is up!
 Catty is here for revenge and to reclaim his leadership over the internet.
