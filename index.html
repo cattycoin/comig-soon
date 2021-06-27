@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <title>$Catty Coin</title>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bgimg {
+  background: url('/video/video1.webm');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+  
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+</style>
+<body  style="filter: grayscale(var(--value, 100%));">
+    <video src="/video/video1.webm" autoplay loop playsinline muted></video>
+<div class="bgimg">
+   
+  <div class="topleft">
+    <p>Catty Coin</p>
+  </div>
+  <div class="middle">
+    <img  src="/video/logo.png" alt="">
+    <h1>Our site is launching soon</h1>
+    <h2>contract: 0x755d6e62822b1853c8f9c5efa4e40e7c590c8a8d</h2>
+    <hr>
+    <p id="demo" style="font-size:30px"></p>
+    <p><a style="color:white;" href="https://t.me/CattyCoinGroup" target="_blank">Telegram</a></p>
+    <p><a style="color:white;" href="https://twitter.com/CoinCatty" target="_blank">Twitter</a></p>
+    <p><a style="color:white;" href="https://poocoin.app/tokens/0x755d6e62822b1853c8f9c5efa4e40e7c590c8a8d" target="_blank">Chart</a></p>
+  </div>
+  <div class="bottomleft">
+    <p>Copyright © $Catty Team</p>
+  </div>
+</div>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jul 10, 2021 15:37:25").getTime();
+
+// Update the count down every 1 second
+var countdownfunction = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+  
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+  
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
